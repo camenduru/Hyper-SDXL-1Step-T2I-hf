@@ -3,6 +3,7 @@ import os
 import time
 from os import path
 from safetensors.torch import load_file
+from huggingface_hub import hf_hub_download
 
 cache_path = path.join(path.dirname(path.abspath(__file__)), "models")
 os.environ["TRANSFORMERS_CACHE"] = cache_path
