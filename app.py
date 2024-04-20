@@ -52,7 +52,7 @@ with gr.Blocks() as demo:
                 seed = gr.Number(label="Seed", value=3413, interactive=True)
                 btn = gr.Button(value="run")
             with gr.Column():
-                output = gr.Gallery(width=1024, height=768)
+                output = gr.Gallery(height=1024)
 
             def process_image(num_images, height, width, prompt, seed):
                 global pipe
