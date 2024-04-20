@@ -1,3 +1,4 @@
+import spaces
 import argparse
 import os
 import time
@@ -54,6 +55,7 @@ with gr.Blocks() as demo:
             with gr.Column():
                 output = gr.Gallery(height=1024)
 
+            @spaces.GPU
             def process_image(num_images, height, width, prompt, seed):
                 global pipe
                 with torch.inference_mode(), torch.autocast("cuda", dtype=torch.bfloat16), timer("inference"):
